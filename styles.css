@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    transition: background 0.3s, color 0.3s;
+    background: url('https://images.unsplash.com/photo-1512295767273-ac109ac3acfa') no-repeat center/cover;
+    color: #333;
+  }
+  
+  body.dark {
+    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fGRhcmslMjB0aGVtZSUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzEyMDA5NjYx&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
+    color: #ddd;
+  }
+    
+  
+  #darkModeToggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background: #222;
+    padding: 2rem;
+    transition: left 0.3s;
+  }
+  
+  #sidebar.open {
+    left: 0;
+  }
+  
+  #menuToggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #sidebar ul {
+    list-style: none;
+    margin-top: 2rem;
+  }
+  
+  #sidebar ul li {
+    margin: 1rem 0;
+  }
+  
+  #sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  #sidebar ul li a i {
+    margin-right: 10px;
+  }
+
+  .ele{
+    margin-top:1.5rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    background: #f0f0f0;
+  }
+  
+  body.dark .card {
+    background: rgba(40, 40, 40, 0.9);
+  }
+  
+  body.dark .card:hover {
+    background: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
